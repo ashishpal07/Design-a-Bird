@@ -1,9 +1,16 @@
-import javax.sound.midi.SysexMessage;
+public class Penguin extends Bird {
 
-public class Penguin extends Bird implements NonFlyable {
+    public Penguin(int size, int weight, String type) {
+        super(size, weight, type);
+    }
 
     @Override
-    public void nonFly() {
-        System.out.println("Penguin can not fly!");
+    public void eat() {
+        System.out.println(type + " can eats");
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println(type + " can make sound");
     }
 }

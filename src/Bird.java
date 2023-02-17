@@ -4,12 +4,14 @@ public abstract class Bird {
     int weight;
     String type;
 
-    public void eat(String type) {
-        System.out.println(type + " can eat!");
+    public Bird(int size, int weight, String type) {
+        this.size = size;
+        this.weight = weight;
+        this.type = type;
     }
 
-    public void makeSound(String type) {
-        System.out.println(type + " can make sound !");
-    }
+    public abstract void eat();
+
+    public abstract void makeSound();
 
 }

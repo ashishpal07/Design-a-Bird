@@ -1,12 +1,17 @@
-public class Crow extends Bird implements Flyable {
-    FlyingBehaviour fb;
+public class Crow extends Bird implements DefaultFlyable {
 
-    public Crow(FlyingBehaviour fb) {
-        this.fb = new CrowSparrowFlying();
+
+    public Crow(int size, int weight, String type) {
+        super(size, weight, type);
     }
 
     @Override
-    public void fly() {
-        fb.makeFly("Crow");
+    public void eat() {
+        System.out.println(type + " can eats");
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println(type + " can make sound");
     }
 }

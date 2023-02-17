@@ -17,29 +17,28 @@
 
 public class Main {
     public static void main(String[] args) {
-        Pigeon p = new Pigeon();
+
+        Pigeon p = new Pigeon(5, 5, "Pigeon");
         p.fly();
-        p.eat("Pigeon");
-        p.makeSound("Pigeon");
+        p.eat();
+        p.makeSound();
 
-        Crow c = new Crow(new CrowSparrowFlying());
+        Crow c = new Crow(5, 5, "Crow");
         c.fly();
-        c.eat("Crow");
-        c.makeSound("Crow");
+        c.eat();
+        c.makeSound();
 
-        Sparrow s = new Sparrow(new CrowSparrowFlying());
+        Sparrow s = new Sparrow(5, 5, "Sparrow");
         s.fly();
-        s.eat("Sparrow");
-        s.makeSound("Sparrow");
+        s.eat();
+        s.makeSound();
 
-        Ostrich o = new Ostrich();
-        o.nonFly();
-        o.eat("Ostrich");
-        s.makeSound("Ostrich");
+        Ostrich o = new Ostrich(5, 5, "Ostrich");
+        o.eat();
+        s.makeSound();
 
-        Penguin pg = new Penguin();
-        pg.nonFly();
-        pg.eat("Penguin");
-        pg.makeSound("Penguin");
+        Penguin pg = new Penguin(5, 5, "Penguin");
+        pg.eat();
+        pg.makeSound();
     }
 }

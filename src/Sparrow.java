@@ -1,12 +1,21 @@
-public class Sparrow extends Bird implements Flyable {
+import java.awt.datatransfer.FlavorEvent;
 
-    FlyingBehaviour fb;
-    public Sparrow(FlyingBehaviour fb) {
-        this.fb = new CrowSparrowFlying();
+public class Sparrow extends Bird implements DefaultFlyable {
+
+
+    public Sparrow(int size, int weight, String type) {
+        super(size, weight, type);
     }
 
     @Override
-    public void fly() {
-        fb.makeFly("Sparrow");
+    public void eat() {
+        System.out.println(type + " can eats");
     }
+
+    @Override
+    public void makeSound() {
+        System.out.println(type + " can make sound");
+    }
+
+
 }
